@@ -1,5 +1,4 @@
 import logging
-import sqlite3
 from telegram import Update
 from telegram.ext import (
     filters, MessageHandler, ApplicationBuilder, 
@@ -11,8 +10,6 @@ import msg
 import config
 
 logging.basicConfig(
-    #filename='bot.log',
-    #filemode='a',
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO
 )
