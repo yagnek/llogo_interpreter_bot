@@ -2,7 +2,7 @@
 
 [Logo](https://en.wikipedia.org/wiki/Logo_(programming_language)) is a programming language designed in 1967. It introduced turtle graphics, widely used to teach kids programming.
 
-This project is an implementation of a minimalist but Turing-complete Logo-like programming language, with an interpreter that works right in Telegram.
+[This project](https://t.me/llogo_interpreter_bot) is an implementation of a minimalist but Turing-complete Logo-like programming language, with an interpreter that works right in Telegram.
 
 ![Demo screenshot](./demo_screenshot.png "Demo Screenshot")
 
