@@ -4,7 +4,10 @@ start_msg = (
     "to help kids learn programming. It is famous for the turtle graphics. "
     "I can interpret the most essential commands of this language. Note "
     "that I only work with numeric types, and each message you send me is "
-    "a separate program. To see the list of available procedures, run /help"
+    "a separate program. To see the list of available procedures run /help. "
+    "Here is a sample program to make me draw a square:\n"
+    "repeat 4 [forward 100 right 90]"
+    
 )
 
 help_msg = (
@@ -82,11 +85,11 @@ repeat_msg = (
 
 make_msg = (
     'make "*name* *value* \n\n'
-    "Creates a variable and assigns a value to it. The value can be a "
-    "number, a variable, or a simple arithmetic expression."
+    'Creates a variable and assigns a value to it. The value can be a '
+    'number, a variable, or a simple arithmetic expression.'
     'Note that when creating a variable, its name must be prefixed with ", '
-    "and when the variable is used, its name must be prefixed with :. \n\n"
-    "Aliases: mk \n\n"
+    'and when the variable is used, its name must be prefixed with :. \n\n'
+    'Aliases: mk \n\n'
     'Example: \nmake "x 360 / 7 \nright :x'
 )
 
@@ -102,24 +105,24 @@ to_msg = (
     "Nested function definitions are NOT allowed, but a function can call "
     "other functions. Note that the function definition must end with the "
     "'end' keyword.\n\n"
-    "Example:\n to square :side repeat 4 [forward :side right 90] end\n "
+    "Example:\nto square :side repeat 4 [forward :side right 90] end\n"
     "square 42"
 )
 
-clean_msg = "clean \n\n Cleans the screen."
+clean_msg = "clean \n\nCleans the screen."
 
-home_msg = "home \n\n Moves the turtle to the center of the field."
+home_msg = "home \n\nMoves the turtle to the center of the field."
 
-clearscreen_msg = "clearscreen \n\n Moves the turtle to the center of the field and cleans the screen."
+clearscreen_msg = "clearscreen \n\nMoves the turtle to the center of the field and cleans the screen."
 
 hideturtle_msg = (
     "hideturtle \n\n"
-    "Makes the turtle invisible. \n\n Aliases: ht"
+    "Makes the turtle invisible. \n\nAliases: ht"
 )
 
 showturtle_msg = (
     "showturtle \n\n"
-    "Makes the turtle visible. \n\n Aliases: st"
+    "Makes the turtle visible. \n\nAliases: st"
 )
 
 setheading_msg = (
