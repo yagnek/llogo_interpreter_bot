@@ -177,7 +177,7 @@ class Interpreter():
                                     break
                             self.new_function(definition)
                         else:
-                            self.raise_error("ERROR: The word", procedure_name, "is reserved")
+                            self.raise_error("Error: The word", procedure_name, "is reserved")
                     elif tokens[i] in self.mem:
                         procedure_name = tokens[i]
                         args, args_count = self.parse_arguments(procedure_name, tokens[i+1:])
@@ -188,7 +188,7 @@ class Interpreter():
                         self.interpret(procedure_tokens)
                         jump = args_count
                     else:
-                        self.raise_error("EXCEPTION: " + str(tokens[i]))
+                        self.raise_error("Exception: " + str(tokens[i]))
                 else:  
                     jump -= 1
 
@@ -259,21 +259,24 @@ class Interpreter():
     def interpreting_pipeline(self, line):
         setattr(self, "img_out", False)
         line = self.parse(line)
-        rb = line.count('[')
-        lb = line.count(']')
-        image_output = None
-        if '(' in line or ')' in line:
-            self.raise_error("Error: Parenthesis are not supported in this implementation")
-        elif rb != lb:
-            self.raise_error("Error: Square brackets were not closed")
-        else:
-            tokens = self.tokenize(line)
-            self.interpret(tokens)
-            if self.img_out == True:
-                image_output = self.render_field()
-        error_output = copy(self.error_output)
-        text_output = copy(self.text_output)
-        return image_output, error_output, text_output
+        try:
+            rb = line.count('[')
+            lb = line.count(']')
+            image_output = None
+            if '(' in line or ')' in line:
+                self.raise_error("Error: Parenthesis are not supported in this implementation")
+            elif rb != lb:
+                self.raise_error("Error: Square brackets were not closed")
+            else:
+                tokens = self.tokenize(line)
+                self.interpret(tokens)
+                if self.img_out == True:
+                    image_output = self.render_field()
+            error_output = copy(self.error_output)
+            text_output = copy(self.text_output)
+            return image_output, error_output, text_output
+        except:
+            self.raise_error("Something went wrong. Please check your program.")
 
 def new_interpreter():
     field = Field()

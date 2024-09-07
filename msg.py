@@ -96,10 +96,10 @@ make_msg = (
 
 if_msg = (
     'if *condition* [*do if true*] [*do if false*]\n\n'
-    'Checks whether the *condition* is true, and executes one of two'
-    'scripts, depending on the result. The *do if false* script is'
+    'Checks whether the *condition* is true, and executes one of two '
+    'scripts, depending on the result. The *do if false* script is '
     'optional. To check the *condition*, >, <, and = can be used.\n\n'
-    'Example: \nmake "x 10\nif x > 0 [print 1] [print 0]'
+    'Example: \nmake "x 10\nif :x > 0 [print 1] [print 0]'
 )
 
 to_msg = (

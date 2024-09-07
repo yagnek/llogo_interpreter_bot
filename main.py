@@ -1,4 +1,5 @@
 import logging
+import sqlite3
 from telegram import Update
 from telegram.ext import (
     filters, MessageHandler, ApplicationBuilder, 
@@ -55,6 +56,7 @@ if __name__ == '__main__':
         'pendown': msg.pendown_msg,
         'repeat': msg.repeat_msg,
         'make': msg.make_msg,
+        'if': msg.if_msg,
         'to': msg.to_msg,
         'clean': msg.clean_msg,
         'home': msg.home_msg,
