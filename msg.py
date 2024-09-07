@@ -1,7 +1,7 @@
 start_msg = (
     "Hi! I'm a chat bot that can interpret a Turing-complete Logo-like "
     "programming language. Logo is a programming language designed in 1967 "
-    "to help kids learn programming. It is famous for the turtle graphics. "
+    "to help kids learn programming. It is famous for the turtle graphics.\n"
     "I can interpret the most essential commands of this language. Note "
     "that I only work with numeric types, and each message you send me is "
     "a separate program. To see the list of available procedures run /help. "
@@ -21,6 +21,7 @@ help_msg = (
     "/pendown\n"
     "/repeat\n"
     "/make\n"
+    "/if\n"
     "/to\n"
     "/clean\n"
     "/home\n"
@@ -91,6 +92,14 @@ make_msg = (
     'and when the variable is used, its name must be prefixed with :. \n\n'
     'Aliases: mk \n\n'
     'Example: \nmake "x 360 / 7 \nright :x'
+)
+
+if_msg = (
+    'if *condition* [*do if true*] [*do if false*]\n\n'
+    'Checks whether the *condition* is true, and executes one of two'
+    'scripts, depending on the result. The *do if false* script is'
+    'optional. To check the *condition*, >, <, and = can be used.\n\n'
+    'Example: \nmake "x 10\nif x > 0 [print 1] [print 0]'
 )
 
 to_msg = (
